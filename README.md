@@ -1,6 +1,3 @@
-
-
-
 3. ERC-1155 (Multi-Token – Mixed Fungible and Non-Fungible)
 Core Functions
 -balanceOf(address account, uint256 id)→ Returns how many tokens of a given ID an address owns.
