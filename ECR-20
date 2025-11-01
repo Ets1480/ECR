@@ -1,0 +1,11 @@
+1. ERC-20 (Fungible Token – Like Coins)
+Core Functions
+-totalSupply → Returns the total number of tokens in existence.
+-balanceOf(address account)→ Shows how many tokens a specific address owns.
+-transfer(address to, uint256 amount)→ Sends tokens from your account to another address.
+-approve(address spender, uint256 amount)→ Authorizes another address to spend your tokens.
+-allowance(address owner, address spender) → Checks how many tokens a spender is allowed to use from an owner’s account.
+-transferFrom(address from, address to, uint256 amount)→ Moves tokens from one address to another using the allowance mechanism.
+Internal Functions
+_mint(address account, uint256 amount)→ Creates new tokens and adds them to the specified account.
+_burn(address account, uint256 amount)→ Destroys tokens from the specified account.
