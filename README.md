@@ -1,15 +1,17 @@
-# ECR-20
-1. ERC-20 (Fungible Token – Like Coins)
+
+2. ERC-721 (Non-Fungible Token – Unique Items)
 Core Functions
--totalSupply → Returns the total number of tokens in existence.
--balanceOf(address account)→ Shows how many tokens a specific address owns.
--transfer(address to, uint256 amount)→ Sends tokens from your account to another address.
--approve(address spender, uint256 amount)→ Authorizes another address to spend your tokens.
--allowance(address owner, address spender) → Checks how many tokens a spender is allowed to use from an owner’s account.
--transferFrom(address from, address to, uint256 amount)→ Moves tokens from one address to another using the allowance mechanism.
+-balanceOf(address owner)→ Returns how many NFTs a specific address owns.
+-ownerOf(uint256 tokenId)→ Returns the current owner of a specific NFT.
+-approve(address to, uint256 tokenId)→ Grants permission for another address to transfer a specific NFT.
+-getApproved(uint256 tokenId)→ Returns the address approved to transfer a specific NFT.
+-setApprovalForAll(address operator, bool approved)→ Allows or revokes another address’s permission to manage all your NFTs.
+-isApprovedForAll(address owner, address operator)→ Checks if an operator can manage all NFTs of an owner.
+-transferFrom(address from, address to, uint256 tokenId)→ Transfers ownership of an NFT from one address to another.
+-safeTransferFrom(address from, address to, uint256 tokenId)→ Safely transfers an NFT, ensuring the recipient can handle it.
 Internal Functions
-_mint(address account, uint256 amount)→ Creates new tokens and adds them to the specified account.
-_burn(address account, uint256 amount)→ Destroys tokens from the specified account.
+_mint(address to, uint256 tokenId)→ Creates a new NFT and assigns it to the specified address.
+_burn(uint256 tokenId)→ Destroys a specific NFT.
 
 3. ERC-1155 (Multi-Token – Mixed Fungible and Non-Fungible)
 Core Functions
